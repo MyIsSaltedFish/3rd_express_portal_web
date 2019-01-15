@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/easyui15/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" href="../static/easyui15/themes/icon.css">
+</head>
+<body>
+把 a标签渲染成 一个easyui的 linkbutton<br>
+<a href="#" id="atest" class="easyui-linkbutton"
+   data-options="iconCls:'icon-world',plain:true">test</a>
+</body>
+<a href="#" id="atest1">test1</a>
+</body>
+<script src="../static/easyui15/jquery.min.js"></script>
+<script src="../static/easyui15/jquery.easyui.min.js"></script>
+<script src="../static/easyui15/locale/easyui-lang-zh_CN.js"></script>
+<script>
+    //$("#atest").linkbutton();
+    $("#atest1").linkbutton({
+        iconCls:'icon-world',
+        plain:true,
+        text:'test gaga',
+        onClick:function(){
+            alert('test');
+        }
+    });
+
+    $("#atest1").linkbutton('disable');
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/easyui15/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" href="../static/easyui15/themes/icon.css">
+</head>
+<body>
+<form id="ff">
+    <p>name:<input type="text" name="uname" id="uname"/></p>
+    <p>pass1:<input type="password" name="upass1" id="upass1"/></p>
+    <p>pass2:<input type="password" name="upass2" id="upass2"/></p>
+    <p>课程号:<input type="text" name="cno" id="cno"/></p>
+    <p>学生号:<input type="text" name="sno" id="sno"/></p>
+    <a href="easyui-linkbutton">提交</a>
+</form>
+</body>
+</body>
+<script src="../static/easyui15/jquery.min.js"></script>
+<script src="../static/easyui15/jquery.easyui.min.js"></script>
+<script src="../static/easyui15/locale/easyui-lang-zh_CN.js"></script>
+<script>
+    $.extend($.fn.validatebox.defaults.rules, {
+        equals: {
+            //验证的时候自动调用的 方法  参数1：在框中的输入的值 ，2 param 数组 这个传给验证方法的参数
+            //返回true 意味着验证通过  false 验证不通过
+            validator: function(value,param){
+                return value == $(param[0]).val();
+            },
+            message: '两次输入不一样.'
+        },
+        dz: {
+            validator: function(value,param){
+                var reg = new RegExp("^[0-9]{"+param[1]+"}$");
+                return reg.test(value);
+            },
+            message: '{0} 必须是 {1} 位数字.'
+        }
+    });
+    $('#uname').textbox({
+        required:true,
+        validType:['length[2,20]','email']
+    });
+    $('#upass1').passwordbox({
+        required:true,
+        validType:'length[6,12]',
+        missingMessage:'密码是必须输入项目',
+        invalidMessage:'密码必须输入6到12位之间'
+    });
+
+    $('#upass2').passwordbox({
+        required:true,
+        validType:"equals['#upass1']"
+    });
+
+    $('#cno').textbox({
+        validType:"dz['课程号',3]"
+    })
+
+    $('#sno').textbox({
+        validType:"dz['学号',6]"
+    })
+
+    $("a").on('click',function(event){
+        event.preventDefault();
+        /*var flag = $("#ff").form('validate');
+        if(flag==false){
+            return;
+        }
+        alert('submit');$.post*/
+        $('#ff').form('submit', {
+            url:'#',
+        onSubmit: function(){
+            return $("#ff").form('validate');
+        },
+        success:function(data){
+            alert(data)
+        }
+    });
+    })
+
+</script>
+</html>

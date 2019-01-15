@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET / HTTP/1.1" 200 2277 http-bio-8085-exec-1 176
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET /static/easyui15/themes/bootstrap/easyui.css HTTP/1.1" 200 60109 http-bio-8085-exec-2 121
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET /static/easyui15/locale/easyui-lang-zh_CN.js HTTP/1.1" 200 2501 http-bio-8085-exec-6 86
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET /static/easyui15/jquery.easyui.min.js HTTP/1.1" 200 409812 http-bio-8085-exec-5 84
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET /static/easyui15/themes/icon.css HTTP/1.1" 200 2662 http-bio-8085-exec-3 115
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET /static/easyui15/jquery.min.js HTTP/1.1" 200 95957 http-bio-8085-exec-4 87
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET /static/easyui15/jquery.min.js HTTP/1.1" 304 - http-bio-8085-exec-8 30
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8085-exec-8 13
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET /static/easyui15/themes/icons/filesave.png HTTP/1.1" 200 898 http-bio-8085-exec-8 22
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET /static/easyui15/themes/icons/world.png HTTP/1.1" 200 923 http-bio-8085-exec-10 26
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET /static/easyui15/themes/icons/search.png HTTP/1.1" 200 813 http-bio-8085-exec-8 7
+0:0:0:0:0:0:0:1 - - [15/Jan/2019:20:16:30 +0800] "GET /static/easyui15/themes/icons/reload.png HTTP/1.1" 200 1045 http-bio-8085-exec-8 14

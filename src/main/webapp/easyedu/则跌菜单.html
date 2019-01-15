@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/easyui15/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" href="../static/easyui15/themes/icon.css">
+    <title>Title</title>
+</head>
+<body>
+<div id="aa" class="easyui-accordion" style="width:200px">
+    <div title="Title1" data-options="title:'系统管理',iconCls:'icon-save',selected:true" >
+        <p><a class="easyui-linkbutton" data-options="plain:true" href="system/tousers">用户管理</a></p>
+        <p><a class="easyui-linkbutton" data-options="plain:true" href="system/torole">角色管理</a></p>
+        <p><a class="easyui-linkbutton" data-options="plain:true" href="system/toright">权限管理</a></p>
+    </div>
+    <div title="报表管理" data-options="iconCls:'icon-reload'" style="padding:10px;">
+        content2
+    </div>
+    <div title="Title3">
+        content3
+    </div>
+</div>
+</body>
+<script src="../static/easyui15/jquery.min.js"></script>
+<script src="../static/easyui15/jquery.easyui.min.js"></script>
+<script src="../static/easyui15/locale/easyui-lang-zh_CN.js"></script>
+</html>

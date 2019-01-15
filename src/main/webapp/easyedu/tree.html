@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/easyui15/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" href="../static/easyui15/themes/icon.css">
+</head>
+<body>
+<ul id="tt"></ul>
+</body>
+<script src="../static/easyui15/jquery.min.js"></script>
+<script src="../static/easyui15/jquery.easyui.min.js"></script>
+<script src="../static/easyui15/locale/easyui-lang-zh_CN.js"></script>
+<script>
+    $("#tt").tree({
+        url:'test.json',
+        animate:true,
+        lines:true,
+        dnd:true,
+        onClick: function (node) {
+            alert(node.text);
+            alert(node.id);
+        }
+    });
+</script>
+</html>

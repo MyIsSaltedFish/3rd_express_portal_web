@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/easyui15/themes/bootstrap/easyui.css">
+    <link rel="stylesheet" href="../static/easyui15/themes/icon.css">
+</head>
+<body>
+<table id="dg">
+</table>
+
+</body>
+<script src="../static/easyui15/jquery.min.js"></script>
+<script src="../static/easyui15/jquery.easyui.min.js"></script>
+<script src="../static/easyui15/locale/easyui-lang-zh_CN.js"></script>
+<script>
+    $('#dg').datagrid({
+        url:'datagrid_data.json',
+        title:'角色',
+        fitColumns:true,
+        scrollbarSize:0,
+        rownumbers:true,
+        columns:[[
+            {field:'roleid',title:'角色id',width:1,checkbox:true},
+            {field:'rolename',title:'角色名称',width:9}
+        ]],
+        pagination:true,
+        pageSize:3,
+        pageList:[3,5,10,20],
+        fit:true
+    });
+</script>
+</html>
